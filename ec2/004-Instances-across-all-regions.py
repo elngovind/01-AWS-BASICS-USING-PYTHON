@@ -8,5 +8,4 @@ for region in client.describe_regions()['Regions']:
     print ('Listing of ec2 instances in region ', region['RegionName'])
     result = ec2.instances.all()
     for instance in result:
-            print("\t The InstanceID is ----> ",instance.id,"\tThe Instance Capacity is ---->",instance.instance_type)
-            print("\t Current state ----> ",instance.state['Name'])
+            print(instance.id,instance.instance_type)
